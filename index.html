@@ -62,12 +62,13 @@
                                     
                                     <header class="header">
                                         <h5><a><span style="color: #f57600">Polar</span></a></h5>
-                                        <h3>A city builder on a polar grid</h3>
+                                        <h3>City Builder on a polar grid</h3>
                                     </header>
                                     <p>
                                         The goal of this project was to get experience with DOTS and solidify my Zenject knowledge. 
-										The city is set on a configurable polar grid with levels. Node detection under the mouse is math-based, with the only colliders being the levels' bases. 
-										Buildings and people are Entities spawned on demand, people are walking between their Houses and Jobs.
+										The city is set on a configurable polar grid with levels. Node detection under the mouse is math-based, the grid has its representation for DOTS which it uses for Pathfinding (under construction). 
+										Buildings and people are Entities spawned on demand (15 per House in the video), and their paths are calculated in a BurstCompile IJob. 
+										Feature currently being worked on is ECS PathfindingSystem for People which prioritises roads and avoids Buildings.
                                     </p>
     
                                     <video width="1000" height="520" controls>
@@ -83,7 +84,7 @@
                                         <h3>Strategy boardgame port</h3>
                                     </header>
                                     <p><span class="image left"><img src="images/edgegif.gif" alt="" height="375" ></span>
-                                        This project taught me how to teach myself stuff. From hex grid and pathfinding to tools like ProBuilder and UIToolkit, 
+                                        This project taught me how to teach myself stuff. From Hex Grid and Pathfinding to tools like ProBuilder and UIToolkit, 
                                         everything requires patience and determination to shift through the documentation, experiment, and reach the desired outcome.						       
                                     </p>
     
