@@ -11,6 +11,40 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.year-divider {
+				display: -moz-flex;
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				-moz-align-items: center;
+				-webkit-align-items: center;
+				-ms-align-items: center;
+				align-items: center;
+				margin: 4rem 0;
+			}
+
+				.year-divider:before, .year-divider:after {
+					border-bottom: solid 2px #eeeeee;
+					content: '';
+					-moz-flex-grow: 1;
+					-webkit-flex-grow: 1;
+					-ms-flex-grow: 1;
+					flex-grow: 1;
+					opacity: 0.35;
+				}
+
+				.year-divider span {
+					color: #f57600;
+					font-family: "Source Sans Pro", Helvetica, sans-serif;
+					font-weight: 900;
+					letter-spacing: 0.25rem;
+					line-height: 1;
+					padding: 0 2rem;
+					text-transform: uppercase;
+					white-space: nowrap;
+				}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -26,16 +60,31 @@
 						</ul>
 					</div>
 
+					<!-- Skip the intro on every page after the first one visited -->
+						<script>
+							(function() {
+								try {
+									if (window.sessionStorage.getItem('introSeen')) {
+										var intro = document.getElementById('intro');
+										if (intro) intro.parentNode.removeChild(intro);
+									}
+									else
+										window.sessionStorage.setItem('introSeen', '1');
+								}
+								catch (e) {}
+							})();
+						</script>
+
 				<!-- Header -->
 					<header id="header">
-						<a aria-disabled="true" class="logo">Side projects</a>
+						<a aria-disabled="true" class="logo">Learning projects</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
 							<li><a href="index.html">GameDev</a></li>
-							<li class="active"><a href="side-projects.html">Side Projects</a></li>
+							<li class="active"><a href="learning-projects.html">Learning Projects</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 						<ul class="icons">
@@ -78,9 +127,7 @@
 										<li><a href="https://github.com/Genericcc/Polar/tree/master/Assets/_Scripts/_Game" class="button large">Check out the code</a></li>
 									</ul>
 
-                                <br>
-                                <br>
-                                <br>
+                                <div class="year-divider"><span>2024</span></div>
 
                                 <header class="header">
                                     <h5><a><span style="color: #f57600">The Edge: Dawnfall</span></a></h5>
