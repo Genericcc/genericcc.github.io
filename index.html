@@ -15,13 +15,26 @@
 			a.highlight-link {
 				color: #f57600;
 				font-weight: 600;
-				border-bottom: solid 2px #f57600;
+				border-bottom: 0;
 			}
 
 				a.highlight-link:hover {
 					color: #ffffff;
-					border-bottom-color: #ffffff;
 				}
+
+			#main > .post .header h5 {
+				font-size: 2.25rem;
+				margin: 0 0 0.5rem 0;
+			}
+
+			#main > .post .header h3 {
+				font-size: 0.9rem;
+				letter-spacing: 0.15em;
+			}
+
+			.game-image {
+				margin: 1rem 0 2rem 0;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -38,13 +51,15 @@
 						</ul>
 					</div>
 
-					<!-- Skip the intro on every page after the first one visited -->
+					<!-- Skip the intro and the load-in fade on every page after the first one visited -->
 						<script>
 							(function() {
 								try {
 									if (window.sessionStorage.getItem('introSeen')) {
 										var intro = document.getElementById('intro');
 										if (intro) intro.parentNode.removeChild(intro);
+										var wrapper = document.getElementById('wrapper');
+										if (wrapper) wrapper.classList.remove('fade-in');
 									}
 									else
 										window.sessionStorage.setItem('introSeen', '1');
@@ -92,14 +107,16 @@
                                         <h5><a href="https://store.steampowered.com/app/1466060/Tainted_Grail_The_Fall_of_Avalon/"><span style="color: #f57600">Tainted Grail: The Fall of Avalon</span></a></h5>
                                         <h3>Open-world first-person RPG</h3>
                                     </header>
-                                    <p><span class="image left"><a href="https://store.steampowered.com/app/1466060/Tainted_Grail_The_Fall_of_Avalon/"><img src="images/steam_taintedgrail.jpg" alt="Tainted Grail: The Fall of Avalon" width="460" height="215"></a></span>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum.
+                                    <p>
+                                        The one people like to call "Polish Skyrim" &mdash; a first-person open world set in a dark
+                                        reimagining of Arthurian legend. I built a new game mode along with the enemies that populate it,
+                                        and prototyped gameplay systems to find out what was worth keeping before it went into production.
+                                        A good part of my time went into refactors and patches, keeping a large, long-running codebase
+                                        healthy while the game kept shipping.
                                     </p>
-                                    <div style="clear: both;"></div>
+
+                                    <a href="https://store.steampowered.com/app/1466060/Tainted_Grail_The_Fall_of_Avalon/" class="image game-image"><img src="images/steam_taintedgrail.jpg" alt="Tainted Grail: The Fall of Avalon" width="460" height="215"></a>
+
                                     <ul class="actions special">
                                         <li><a href="https://store.steampowered.com/app/1466060/Tainted_Grail_The_Fall_of_Avalon/" class="button large icon brands fa-steam">View on Steam</a></li>
                                     </ul>
@@ -108,16 +125,17 @@
 
                                     <header class="header">
                                         <h5><a href="https://store.steampowered.com/app/2800280/Bermuda_Survivor/"><span style="color: #f57600">Bermuda Survivor</span></a></h5>
-                                        <h3>Bullet heaven with world exploration</h3>
+                                        <h3>Pixel-art action survivor</h3>
                                     </header>
-                                    <p><span class="image left"><a href="https://store.steampowered.com/app/2800280/Bermuda_Survivor/"><img src="images/steam_bermudasurvivor.jpg" alt="Bermuda Survivor" width="460" height="215"></a></span>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum.
+                                    <p>
+                                        A pixel-art action survivor that mixes bullet heaven combat with open exploration of the Bermuda
+                                        Triangle. This one I saw through from the first prototype to release, and touched pretty much every
+                                        part of it. Gameplay: combat, enemy AI, skills, buffs, inventory, vehicles and bosses.
+                                        Core: the modifier system, pathfinding and optimization. Visuals and audio: VFX, SFX and shaders.
                                     </p>
-                                    <div style="clear: both;"></div>
+
+                                    <a href="https://store.steampowered.com/app/2800280/Bermuda_Survivor/" class="image game-image"><img src="images/steam_bermudasurvivor.jpg" alt="Bermuda Survivor" width="460" height="215"></a>
+
                                     <ul class="actions special">
                                         <li><a href="https://store.steampowered.com/app/2800280/Bermuda_Survivor/" class="button large icon brands fa-steam">View on Steam</a></li>
                                     </ul>
@@ -126,16 +144,16 @@
 
                                     <header class="header">
                                         <h5><a href="https://store.steampowered.com/app/2134720/Stormbinders/"><span style="color: #f57600">Stormbinders</span></a></h5>
-                                        <h3>Turn-based tactical strategy</h3>
+                                        <h3>Turn-based strategy in the spirit of HoMM 3</h3>
                                     </header>
-                                    <p><span class="image left"><a href="https://store.steampowered.com/app/2134720/Stormbinders/"><img src="images/steam_stormbinders.jpg" alt="Stormbinders" width="460" height="215"></a></span>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum.
+                                    <p>
+                                        Heroes of Might and Magic III was the obvious reference here, only the war is against chaotic magic
+                                        storms. I built the turn-based combat on a hexagonal grid, worked on world creation and the
+                                        exploration layer around it, and put together the UI for cities, combat, heroes and menus.
                                     </p>
-                                    <div style="clear: both;"></div>
+
+                                    <a href="https://store.steampowered.com/app/2134720/Stormbinders/" class="image game-image"><img src="images/steam_stormbinders.jpg" alt="Stormbinders" width="460" height="215"></a>
+
                                     <ul class="actions special">
                                         <li><a href="https://store.steampowered.com/app/2134720/Stormbinders/" class="button large icon brands fa-steam">View on Steam</a></li>
                                     </ul>

@@ -60,13 +60,15 @@
 						</ul>
 					</div>
 
-					<!-- Skip the intro on every page after the first one visited -->
+					<!-- Skip the intro and the load-in fade on every page after the first one visited -->
 						<script>
 							(function() {
 								try {
 									if (window.sessionStorage.getItem('introSeen')) {
 										var intro = document.getElementById('intro');
 										if (intro) intro.parentNode.removeChild(intro);
+										var wrapper = document.getElementById('wrapper');
+										if (wrapper) wrapper.classList.remove('fade-in');
 									}
 									else
 										window.sessionStorage.setItem('introSeen', '1');
